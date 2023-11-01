@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sensor Check</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <script src="../static/script1.js" defer></script>
+    <script src="../static/script2.js" defer></script>
+</head>
+
+<body>
+    <h1>Sensor Control Panel</h1>
+    <form action="/check" method="post">
+        <div>
+            <label><input type="radio" name="sensor" value="Sensor1" required> Sensor 1</label>
+            <label><input type="radio" name="sensor" value="Sensor2" disabled title="Currently unavailable" required>
+                Sensor 2</label>
+            <label><input type="radio" name="sensor" value="Sensor3" disabled title="Currently unavailable" required>
+                Sensor 3</label>
+            <label><input type="radio" name="sensor" value="Sensor4" disabled title="Currently unavailable" required>
+                Sensor 4</label>
+        </div>
+        <button type="submit" id="control-button">CHECK</button>
+
+        <div id="data-table-container">
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Temperature</th>
+                        <th>Humidity</th>
+                        <th>Loudness</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </form>
+    <div id="dataContainer"></div>
+    <span id="sensor-message"
+        style="display: none; position: absolute; background-color: #f9f9f9; border: 1px solid #d1d1d1; padding: 5px; border-radius: 8px; color: red; z-index: 10; box-shadow: 3px 3px 10px rgba(0,0,0,0.1);">
+        Unavailable
+    </span>
+</body>
+
+</html>

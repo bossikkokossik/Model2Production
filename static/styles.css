@@ -1,0 +1,109 @@
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #fff;
+    background-color: #212121;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    height: auto;
+    margin: 0;
+}
+
+
+h1 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+label:hover {
+    transform: scale(1.05);
+}
+
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+input[type="radio"]:disabled+label {
+    color: #a0a0a0;
+    cursor: not-allowed;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+button.stop {
+    background-color: #f44336;
+}
+
+button.stop:hover {
+    background-color: #e53935;
+    transform: scale(1.05);
+}
+
+#data-table-container {
+    width: 700px;
+    height: 200px;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 20px;
+    border: 1px solid #d1d1d1;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+#data-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #212121;
+    position: relative;
+}
+
+#data-table th,
+#data-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+#data-table th {
+    background: white;
+    position: sticky;
+    top: 0;
+}
